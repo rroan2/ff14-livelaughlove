@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from fetch import fashionFetch
+import privateinfo 
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -34,4 +35,4 @@ async def goodnight(ctx):
     await ctx.channel.send("Goodnight bro, love is real")
 
 
-client.run('BOTCODE')
+client.run(privateinfo.info.botcode)

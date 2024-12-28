@@ -1,11 +1,12 @@
+import privateinfo
 import asyncpraw
 
 async def fashionFetch():
     reddit = asyncpraw.Reddit(
-    client_id = "client_id",
-    client_secret = "client_secret",
-    username = "username",
-    password = "password",
+    client_id = privateinfo.info.client_id,
+    client_secret = privateinfo.info.client_secret,
+    username = privateinfo.info.username,
+    password = privateinfo.info.password,
     user_agent = "praw",
     )
 
