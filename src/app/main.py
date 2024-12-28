@@ -14,7 +14,7 @@ async def on_ready():
     print("Bot is ready.")
     print("-------------")
 
-@client.command()
+@bot.hybrid_command()
 async def fashion(ctx):
     post = await fashionFetch()
     if(post != None):
@@ -23,16 +23,23 @@ async def fashion(ctx):
         await ctx.channel.send(embed=em)
         await ctx.channel.send(content="-# *from:* " + post.shortlink, suppress_embeds=True)
     else:
-        await ctx.channel.send("THERE IS NO POST FOR THIS WEEK YET")
+        await ctx.channel.send("THERE IS NO POST FOR THIS WEEK YET!!!")
 
-@client.command()
+@bot.hybrid_command()
 async def hi(ctx):
     await ctx.channel.send("hi")
 
 
-@client.command()
+@bot.hybrid_command()
 async def goodnight(ctx):
     await ctx.channel.send("Goodnight bro, love is real")
+
+# block dms
+# Waiting for an answer you'll never recieve is more painful than never recieving one at all.
+
+@bot.check
+async def globally_block_dms(ctx):
+    return ctx.guild is not None
 
 
 client.run(privateinfo.info.botcode)
