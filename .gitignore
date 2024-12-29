@@ -1,15 +1,12 @@
 # ignore bot credentials
 privateinfo.py
 
-# the rest of this is taken from a template
+# the majority of this is taken from a default template
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -31,22 +28,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Translations
-*.mo
-*.pot
-
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -82,7 +68,6 @@ ipython_config.py
 .pdm-python
 .pdm-build/
 
-
 # Environments
 .env
 .venv
@@ -91,3 +76,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# vscode
+.vscode
+*.code-workspace
+
+#logs
+logs
+*.log
+*.log.gz
