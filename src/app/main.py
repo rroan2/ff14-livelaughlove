@@ -17,7 +17,7 @@ async def on_ready():
 @bot.hybrid_command()
 async def fashion(ctx):
     post = await fashionFetch()
-    if(post != None):
+    if(post != ""):
         em = discord.Embed(title = post.title)
         em.set_image(url=post.url)
         await ctx.channel.send(embed=em)
