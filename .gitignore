@@ -1,5 +1,5 @@
 # ignore bot credentials
-app/privateinfo.py
+src/app/privateinfo.py
 
 # the rest of this is taken from a template
 
