@@ -1,5 +1,5 @@
 # ignore bot credentials
-privateinfo.py
+app/privateinfo.py
 
 # the rest of this is taken from a template
 
@@ -7,7 +7,6 @@ privateinfo.py
 __pycache__/
 *.py[cod]
 *$py.class
-privateinfo.py
 
 
 # C extensions
