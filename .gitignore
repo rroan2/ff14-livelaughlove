@@ -7,6 +7,8 @@ privateinfo.py
 __pycache__/
 *.py[cod]
 *$py.class
+privateinfo.py
+
 
 # C extensions
 *.so
