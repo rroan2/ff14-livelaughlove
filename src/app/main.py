@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
+from discord.ext import bot
 from fetch import fashionFetch
-import privateinfo 
+from privateinfo import info
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -42,4 +43,4 @@ async def globally_block_dms(ctx):
     return ctx.guild is not None
 
 
-client.run(privateinfo.info.botcode)
+client.run(info.botcode)
