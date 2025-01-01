@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord.ext import app_commands
 from discord.ext import bot
 from fetch import fashionFetch
 from privateinfo import info
@@ -15,7 +16,10 @@ async def on_ready():
     print("Bot is ready.")
     print("-------------")
 
-@bot.hybrid_command()
+# decorators related to app commands should be placed below the hybrid_command decorator as per documentation
+
+@commands.hybrid_command(name='fashion', with_app_command=True)
+@app_commands.describe(Fashion for the week)
 async def fashion(ctx):
     post = await fashionFetch()
     if(post != ""):
@@ -26,12 +30,14 @@ async def fashion(ctx):
     else:
         await ctx.channel.send("THERE IS NO POST FOR THIS WEEK YET!!!")
 
-@bot.hybrid_command()
+@commands.hybrid_command(name='hi', with_app_command=True)
+@app_commands.describe(hello)
 async def hi(ctx):
     await ctx.channel.send("hi")
 
 
-@bot.hybrid_command()
+@commands.hybrid_command(name='goodnight', with_app_command=True)
+@app_commands.describe(goodbye)
 async def goodnight(ctx):
     await ctx.channel.send("Goodnight bro, love is real")
 
