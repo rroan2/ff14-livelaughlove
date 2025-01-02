@@ -92,3 +92,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# kate 
+*.kate*
+
+# vscode
+.vscode
+*.code-workspace
